@@ -1,0 +1,9 @@
+{% block content %}
+  <h2>Confirm Deletion</h2>
+  <p>Are you sure you want to delete the inquiry?</p>
+  <form method="post" action="{% url 'delete_inquiry' inquiry.id %}">
+    {% csrf_token %}
+    <button type="submit">Yes, delete</button>
+    <a href="{% url 'dashboard' %}">Cancel</a>
+  </form>
+{% endblock %}

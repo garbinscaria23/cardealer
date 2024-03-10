@@ -1,0 +1,144 @@
+{% extends 'base.html' %}
+
+{% block title %} | About Us {% endblock %}
+{% block content %}
+
+{% load static %}
+
+<!-- Sub banner start -->
+<!-- Log on to codeastro.com for more projects -->
+<div class="sub-banner overview-bgi">
+    <div class="container breadcrumb-area">
+        <div class="breadcrumb-areas">
+            <h1>About Us</h1>
+            <ul class="breadcrumbs">
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li class="active">About Us</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- Sub Banner end -->
+
+<!-- Service center strat -->
+<div class="about-car content-area-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-5 col-lg-6">
+                <div class="about-car-photo">
+                    <div id="carDetailsSlider" class="carousel car-details-sliders slide">
+                        <!-- main slider carousel items -->
+                        <div class="carousel-inner">
+                            <div class="active item carousel-item" data-slide-number="0">
+                                <img src="{% static 'img/car-1.jpg' %}" class="img-fluid" alt="slider-car">
+                            </div>
+                            <div class="item carousel-item" data-slide-number="1">
+                                <img src="{% static 'img/car-2.jpg' %}" class="img-fluid" alt="slider-car">
+                            </div>
+                            <div class="item carousel-item" data-slide-number="2">
+                                <img src="{% static 'img/car-3.jpg' %}" class="img-fluid" alt="slider-car">
+                            </div>
+                        </div>
+                        <!-- main slider carousel nav controls -->
+                        <ul class="carousel-indicators car-properties list-inline nav nav-justified">
+                            <li class="list-inline-item active">
+                                <a id="carousel-selector-0" class="selected" data-slide-to="0" data-target="#carDetailsSlider">
+                                    <img src="{% static 'img/car-1.jpg' %}" class="img-fluid" alt="small-car">
+                                </a>
+                            </li>
+							<!-- Log on to codeastro.com for more projects -->
+                            <li class="list-inline-item">
+                                <a id="carousel-selector-1" data-slide-to="1" data-target="#carDetailsSlider">
+                                    <img src="{% static 'img/car-2.jpg' %}" class="img-fluid" alt="small-car">
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a id="carousel-selector-2" data-slide-to="2" data-target="#carDetailsSlider">
+                                    <img src="{% static 'img/car-3.jpg' %}" class="img-fluid" alt="small-car">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-7 col-lg-6 align-self-center">
+                <div class="best-used-car">
+                    <h3>Welcome to <span>CarDealer</span></h3>
+                    <p>Welcome to CAR DELEAR - Your Trusted Partner in Quality Pre-Owned Cars!
+
+                        At Our company, we understand that finding the perfect pre-owned car is not just about the vehicle; it's about the peace of mind that comes with a reliable purchase. With a passion for delivering top-notch service and a commitment to providing the best selection of second-hand cars, we stand as your trusted partner in the journey to find your dream car.</p>
+                        
+                        <h3> Choose Us?</h3>
+                        
+                        <h4>Quality Assurance:</h4>
+                        <p>Every car in our inventory undergoes a rigorous inspection process to ensure it meets our high-quality standards. We take pride in offering pre-owned vehicles that not only look great but also deliver optimal performance.</p>
+                        
+                        <h4>Variety and Choice:</h4>
+                        <p>Explore a diverse range of makes and models to find the perfect fit for your lifestyle. Whether you're looking for a fuel-efficient sedan, a spacious SUV, or a stylish coupe, we have a wide selection to cater to every preference and budget.</p>
+                        
+                        <h4>Transparent History:</h4>
+                        <p></p>We believe in transparency. Each vehicle comes with a detailed history report, so you know exactly what you're getting. We want you to make an informed decision with confidence.</p>
+                        
+                        <h4>Expert Guidance:</h4>
+                       <p> Our team of experienced and knowledgeable professionals is here to assist you at every step. Whether you have specific requirements or need guidance on the right model for you, we're dedicated to providing personalized and friendly service.</p>
+                        
+                        <h4>Customer Satisfaction:</h4>
+                        <p>Your satisfaction is our priority. We strive to exceed your expectations, ensuring a seamless and enjoyable car-buying experience. Our commitment to customer satisfaction has earned us a reputation for reliability and trustworthiness.</p>
+                        
+                       <h3> Visit Us Today!</h3>
+                        
+                       <p> We invite you to visit our showroom and explore the extensive range of second-hand cars waiting for new owners. Whether you're a first-time buyer or a seasoned car enthusiast, we have something for everyone.
+                        
+                        Discover the joy of owning a quality pre-owned car with [Your Company Name]. Your journey to finding the perfect vehicle starts here!
+                        
+                        </p>
+
+                    <p class="mb-0">garbinscaria@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Service center end -->
+
+
+
+<!-- Our team start -->
+<div class="our-team content-area">
+    <div class="container">
+        <!-- Main title -->
+        <div class="main-title">
+            <h1>Executive <span>Team</span></h1>
+            <p>Team working behind maintaining the quality of our Car Dealership Website.</p>
+        </div>
+        <!-- Slick slider area start -->
+        <div class="slick-slider-area clearfix">
+            <div class="row slick-carousel" data-slick='{"slidesToShow": 4, "responsive":[{"breakpoint": 1024,"settings":{"slidesToShow": 2}}, {"breakpoint": 768,"settings":{"slidesToShow": 1}}]}'>
+            {% for team in teams %}
+                <div class="slick-slide-item">
+                    <div class="team-1">
+                        <div class="photo">
+                            <a href="#">
+                                <img src="{{team.photo.url}}" alt="team-1" class="img-fluid">
+                            </a>
+                            <div class="social-list clearfix">
+                                <a href="#" target="_blank" class="facebook-bg"><i class="fa fa-facebook"></i></a>
+                                <a href="#" target="_blank" class="twitter-bg"><i class="fa fa-twitter"></i></a>
+                                <a href="#" target="_blank" class="google-bg"><i class="fa fa-google"></i></a>
+                            </div>
+                        </div>
+						<!-- Log on to codeastro.com for more projects -->
+                        <div class="details">
+                            <h4><a href="team-detail.html">{{team.first_name}} {{team.last_name}}</a></h4>
+                            <h5>{{team.designation}}</h5>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Our team end -->
+{% endblock %}
